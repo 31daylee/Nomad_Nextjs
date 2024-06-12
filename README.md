@@ -8,4 +8,3 @@
 4. JSON script "scripts" -> "dev" : "next dev"
 5. Add `page.tsx` or `page.jsx` in "`app`"
 6. npm run dev
-# Nomad_Nextjs
