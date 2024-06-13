@@ -49,3 +49,8 @@ The point is all components are rendered on the Server side first. If you write 
 - `layout.tsx` and `not-found.tsx` files should be existed on `/app` because they are normallay shared all routes.
 
 - Metadata API that can be used to define your application metadata (e.g. meta and link tags inside your HTML head element) for improved SEO and web shareability.
+
+## 2.9 Dynamic Routes
+
+- [] : params : {id : }
+  ex) `/app/(movies)/movies/[id]` : `[id]` is id of params. It was rendered on Server side.
