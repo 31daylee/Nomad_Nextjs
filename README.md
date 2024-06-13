@@ -60,3 +60,7 @@ The point is all components are rendered on the Server side first. If you write 
 ## 3.1 Client Side
 
 - You cannot use metadata and 'use client' at the same time
+
+## 3.2 Server Side
+
+- You can use metadata with redering of Server side. (Next.js)
