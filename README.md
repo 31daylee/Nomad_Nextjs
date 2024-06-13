@@ -69,3 +69,8 @@ The point is all components are rendered on the Server side first. If you write 
 
 - `loading.tsx` : You can show an instant loading state from the server while the content of a route segment loads. The new content is automatically swapped in once rendering is complete.
   > `/app/(home)/loading.tsx` and `/app/(home)/page.tsx` => loading.tsx is loading state and page.tsx is new content
+
+## 3.4 Parallel Requests
+
+- Multiple fetch Requests -> Using `Promise.all` : Multiple asynchronous processes are performed in parallel.
+  > `Promise.all([getMovie(id), getVideos(id)])`
