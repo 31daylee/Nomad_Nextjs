@@ -41,4 +41,5 @@ The point is all components are rendered on the Server side first. If you write 
 
 - A layout is UI that is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. Layouts can also be nested.
   > `/app/layout.js` : the layout will be shared with the `/app`
+  > <br/>
   > `/app/about-us/layout.js` : the layout will be shared with the `/app/about-us`
