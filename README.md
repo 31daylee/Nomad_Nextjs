@@ -33,6 +33,12 @@
 - This refers to the process of converting non-interactive HTML created through server-side rendering (SSR) into interactive React components using client-side JavaScript.
   (Attaching React to HTML already rendered in a server environment)
 
-## 2.5 Recap
+## 2.6 Recap
 
 The point is all components are rendered on the Server side first. If you write 'use client' at the top of the script, it will be rendered again on the Client side.
+
+## 2.7 Layouts
+
+- A layout is UI that is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. Layouts can also be nested.
+  > `/app/layout.js` : the layout will be shared with the `/app`
+  > `/app/about-us/layout.js` : the layout will be shared with the `/app/about-us`
