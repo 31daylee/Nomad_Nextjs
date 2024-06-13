@@ -27,3 +27,8 @@
 - SSR : Server Side Rendering.
   It is mainly used when building websites with Next.js
 - CSR : Client Side Rendering.
+
+## 2.4 Hydration
+
+- This refers to the process of converting non-interactive HTML created through server-side rendering (SSR) into interactive React components using client-side JavaScript.
+  (Attaching React to HTML already rendered in a server environment)
