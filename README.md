@@ -73,4 +73,5 @@ The point is all components are rendered on the Server side first. If you write 
 ## 3.4 Parallel Requests
 
 - Multiple fetch Requests -> Using `Promise.all` : Multiple asynchronous processes are performed in parallel.
+  <br/>
   > `Promise.all([getMovie(id), getVideos(id)])`
