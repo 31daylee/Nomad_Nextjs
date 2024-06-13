@@ -40,6 +40,12 @@ The point is all components are rendered on the Server side first. If you write 
 ## 2.7 Layouts
 
 - A layout is UI that is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. Layouts can also be nested.
-  > `/app/layout.js` : the layout will be shared with the `/app`
-  > <br/>
-  > `/app/about-us/layout.js` : the layout will be shared with the `/app/about-us`
+  > `/app/layout.js` : the layout will be shared with the `/app` > <br/> > `/app/about-us/layout.js` : the layout will be shared with the `/app/about-us`
+
+## 2.8 Metadata
+
+- The root `page.tsx` needs Root Group using ( ).
+  > `/app/(home)/page.tsx`
+- `layout.tsx` and `not-found.tsx` files should be existed on `/app` because they are normallay shared all routes.
+
+- Metadata API that can be used to define your application metadata (e.g. meta and link tags inside your HTML head element) for improved SEO and web shareability.
