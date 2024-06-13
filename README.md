@@ -32,3 +32,7 @@
 
 - This refers to the process of converting non-interactive HTML created through server-side rendering (SSR) into interactive React components using client-side JavaScript.
   (Attaching React to HTML already rendered in a server environment)
+
+## 2.5 Recap
+
+The point is all components are rendered on the Server side first. If you write 'use client' at the top of the script, it will be rendered again on the Client side.
