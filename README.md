@@ -52,6 +52,7 @@ The point is all components are rendered on the Server side first. If you write 
 
 ## 2.9 Dynamic Routes
 
-- [] : params : {id : }
+- You can use []
+- `[id]` : params : {id : }
   <br/>
   ex) `/app/(movies)/movies/[id]` : `[id]` is id of params. It was rendered on Server side.
