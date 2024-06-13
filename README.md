@@ -21,3 +21,9 @@
 
 - `usePathname()` : Only works in a Client Component. Needs to add `'use client'` on the top
   > ex) `<li><Link href="/">Home</Link>{path === "/" ? "💖" : ""}</li>`
+
+## 2.3 SSR vs CSR
+
+- SSR : Server Side Rendering.
+  It is mainly used when building websites with Next.js
+- CSR : Client Side Rendering.
