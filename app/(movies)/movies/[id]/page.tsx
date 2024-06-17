@@ -1,10 +1,6 @@
-import { get } from "http";
-import { API_URL } from "../../../(home)/page";
 import MovieInfo, { getMovie } from "../../../../components/movie-info";
-import MovieVideo from "../../../../components/movie-videos";
 import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";
-import { title } from "process";
 interface IParams {
   params: { id: string };
 }

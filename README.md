@@ -102,3 +102,13 @@ The point is all components are rendered on the Server side first. If you write 
    4. Click `Deploy` button
 3. Install TypeScript
    > npm install --save-dev typescript
+
+- Plus Work
+
+4. Check the API_URL
+   - If there is an error about `{API_URL}` then move it to the `app/constants.ts` file.
+5. Set the `prefetch` on `<Link>` components
+   <br/>
+   ex) `<Link prefetch href={`/movies/${id}`}>
+      {title}
+    </Link>`
