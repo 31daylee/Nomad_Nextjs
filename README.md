@@ -89,3 +89,10 @@ The point is all components are rendered on the Server side first. If you write 
 
 - Number.prototype.toFixed() : `.toFixed()`
   ex) `<h3>⭐️ {movie.vote_average.toFixed(1)}</h3>`
+
+## 4.5 Deployment
+
+- Add JSON script "scripts"
+
+  1. "build" : "next build"
+  2. "start": "next start"
