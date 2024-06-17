@@ -84,3 +84,8 @@ The point is all components are rendered on the Server side first. If you write 
 ## Error Handling
 
 - Make the `error.tsx` page next to the specific page.tsx
+
+## 4.3 Movie Trailers
+
+- Number.prototype.toFixed() : `.toFixed()`
+  ex) `<h3>⭐️ {movie.vote_average.toFixed(1)}</h3>`

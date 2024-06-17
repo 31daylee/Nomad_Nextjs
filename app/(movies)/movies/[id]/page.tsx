@@ -1,8 +1,8 @@
 import { get } from "http";
 import { API_URL } from "../../../(home)/page";
-import MovieInfo from "../../../../components/movie-videos";
-import MovieVideo from "../../../../components/movie-info";
-import MovieVideos from "../../../../components/movie-info";
+import MovieInfo from "../../../../components/movie-info";
+import MovieVideo from "../../../../components/movie-videos";
+import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";
 export const metadata = {
   title: "Movie Details",
@@ -15,7 +15,6 @@ export default async function MovieDetail({
 }) {
   return (
     <div>
-      <h3>Movie detail page</h3>
       <Suspense fallback={<h1>Loading movie info</h1>}>
         <MovieInfo id={id} />
       </Suspense>
