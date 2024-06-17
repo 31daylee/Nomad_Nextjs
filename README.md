@@ -76,12 +76,12 @@ The point is all components are rendered on the Server side first. If you write 
   <br/>
   > `Promise.all([getMovie(id), getVideos(id)])`
 
-## Suspense
+## 3.5 Suspense
 
 - `<Suspense>`
 - There is not client side interactivity in the component it can be a server component and we don’t even need to ship component code to the client side, it only server side renders.
 
-## Error Handling
+## 3.7 Error Handling
 
 - Make the `error.tsx` page next to the specific page.tsx
 
@@ -110,5 +110,5 @@ The point is all components are rendered on the Server side first. If you write 
 5. Set the `prefetch` on `<Link>` components
    <br/>
    ex) `<Link prefetch href={`/movies/${id}`}>
-      {title}
+   {title}
     </Link>`
