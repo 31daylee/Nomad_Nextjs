@@ -100,3 +100,5 @@ The point is all components are rendered on the Server side first. If you write 
    2. Select the repo
    3. Configure Project - Name
    4. Click `Deploy` button
+3. Install TypeScript
+   > npm install --save-dev typescript
