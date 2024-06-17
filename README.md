@@ -92,7 +92,11 @@ The point is all components are rendered on the Server side first. If you write 
 
 ## 4.5 Deployment
 
-- Add JSON script "scripts"
-
-  1. "build" : "next build"
-  2. "start": "next start"
+1. Add JSON script "scripts"
+   1. "build" : "next build"
+   2. "start": "next start"
+2. Go to the Vercel
+   1. Click `Add New` button - Project
+   2. Select the repo
+   3. Configure Project - Name
+   4. Click `Deploy` button
