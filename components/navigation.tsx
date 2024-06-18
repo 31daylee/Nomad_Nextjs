@@ -10,11 +10,12 @@ export default function Navigation() {
       <ul>
         <li>
           <Link href="/">Home</Link>
-          {path === "/" ? "🍿" : ""}
         </li>
+
+        <p className={styles.logo}>NEXTFILM</p>
+
         <li>
-          <Link href="/about-us">About us</Link>
-          {path === "/about-us" ? "🍿" : ""}
+          <Link href="/about-us">About</Link>
         </li>
       </ul>
     </nav>
