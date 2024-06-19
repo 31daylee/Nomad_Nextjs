@@ -1,29 +1,33 @@
 .nav {
-  background-color: #2d2d2d; /* Bright background color */
+  background-color: #2d2d2d;
   position: fixed;
-  width: 40%;
+  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
   top: 20px;
   border-radius: 50px;
-  padding: 10px 0px;
+  padding: 10px 0;
   left: 50%;
   z-index: 10;
   transform: translateX(-50%);
-  box-shadow: 0 4px 6px #fffefea6; /* Subtle shadow */
+  box-shadow: 0 4px 6px #fffefea6;
 }
 
 .nav ul {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   margin-top: 7px;
   font-size: medium;
+  padding: 0 200px;
 }
 
 .nav ul li {
   list-style: none;
   transform: none;
   transition: all 0.1s ease-in-out;
+  margin: 0 15px;
 }
 
 .nav ul li:hover {
@@ -34,4 +38,28 @@
   font-size: x-large;
   color: red;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav {
+    width: 90%;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav ul {
+    gap: 10px;
+    font-size: small;
+  }
+
+  .logo {
+    font-size: large;
+  }
 }

@@ -1,17 +1,27 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../footer/footer.module.css";
-
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.copyright}>
         Copyright © 2024 31daylee all rights reserved.
       </div>
-      <div className="contact fl-center fl-row">
+      <div className={styles.info}>
         <a href="mailto: 31daylee@gmail.com">
-          <i className="fas fa-envelope fa-2x" style={{ color: "#d1d1d1" }}></i>
+          <FontAwesomeIcon
+            className={styles.logo}
+            icon={faEnvelope}
+            style={{ color: "#ffffff" }}
+          />
         </a>
         <a href="https://github.com/31daylee/Nomad_Nextjs">
-          <i className="fab fa-github fa-2x" style={{ color: "#d1d1d1" }}></i>
+          <FontAwesomeIcon
+            className={styles.logo}
+            icon={faGithub}
+            style={{ color: "#ffffff" }}
+          />
         </a>
       </div>
     </div>

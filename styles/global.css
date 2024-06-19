@@ -128,7 +128,7 @@ table {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-top: 150px;
-  background-color: black;
+  background-color: rgb(17, 17, 17);
   color: white;
   font-size: 17px;
   font-weight: 200;

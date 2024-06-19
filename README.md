@@ -4,7 +4,7 @@
 
 Movie Application with NEXT.JS 14
 </br>
-(This project refers to the Nomad Coder lecture.)
+(This project refers to the Nomad Coder lecture)
 
 ## Tech Stack
 
