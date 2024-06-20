@@ -17,6 +17,7 @@ import {
   Pagination,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { IMAGE_BASE_URL } from "../constants";
 
 export default function MovieContainer({ movies }: { movies: any }) {
   return (
@@ -44,7 +45,7 @@ export default function MovieContainer({ movies }: { movies: any }) {
               <Movie
                 id={movie.id}
                 key={movie.id}
-                poster_path={movie.poster_path}
+                poster_path={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
                 title=""
                 release_date=""
               />
@@ -66,7 +67,7 @@ export default function MovieContainer({ movies }: { movies: any }) {
           <SwiperSlide key={movie.id}>
             <Movie
               id={movie.id}
-              poster_path={movie.poster_path}
+              poster_path={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
               title={movie.title}
               release_date=""
             />
@@ -74,7 +75,7 @@ export default function MovieContainer({ movies }: { movies: any }) {
         ))}
       </Swiper>
       <div className={styles.spacer}>
-        <h3 className={styles.cate}>New</h3>
+        <h3 className={styles.cate}>Upcoming</h3>
       </div>
       <Swiper
         modules={[Pagination, Navigation]}
@@ -87,7 +88,7 @@ export default function MovieContainer({ movies }: { movies: any }) {
           <SwiperSlide key={movie.id}>
             <Movie
               id={movie.id}
-              poster_path={movie.poster_path}
+              poster_path={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
               title={movie.title}
               release_date={movie.release_date}
             />
