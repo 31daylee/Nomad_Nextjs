@@ -1,4 +1,5 @@
-# NEXTFILM
+![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=FF0000&text=NEXTFILM&height=140&fontSize=60)
+
 
 ## About the project
 
