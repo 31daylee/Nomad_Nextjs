@@ -53,49 +53,6 @@ export default function MovieContainer({ movies }: { movies: any }) {
           ))}
         </div>
       </Swiper>
-      <div className={styles.spacer}>
-        <h3 className={styles.cate}>Popular</h3>
-      </div>
-      <Swiper
-        modules={[Pagination, Navigation]}
-        spaceBetween={25}
-        slidesPerView={6}
-        navigation
-        pagination={{ clickable: true }}
-      >
-        {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
-            <Movie
-              id={movie.id}
-              poster_path={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
-              title={movie.title}
-              release_date=""
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className={styles.spacer}>
-        <h3 className={styles.cate}>Upcoming</h3>
-      </div>
-      <Swiper
-        modules={[Pagination, Navigation]}
-        spaceBetween={25}
-        slidesPerView={6}
-        navigation
-        pagination={{ clickable: true }}
-      >
-        {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
-            <Movie
-              id={movie.id}
-              poster_path={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
-              title={movie.title}
-              release_date={movie.release_date}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Footer></Footer>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { API_URL } from "../app/constants";
 import defaultProfile from "../app/asserts/default-profile-image.webp";
 
 export async function getCredits(id: string) {
-  const response = await fetch(`${API_URL}/${id}/credits`);
+  const response = await fetch(`${API_URL}movie/${id}/credits`);
   return response.json();
 }
 
