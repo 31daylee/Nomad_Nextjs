@@ -5,17 +5,11 @@ import React from "react";
 import styles from "../../styles/home.module.css";
 
 import Movie from "../../components/movie";
-import Footer from "../../components/footer/footer";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {
-  EffectCoverflow,
-  Mousewheel,
-  Navigation,
-  Pagination,
-} from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IMAGE_BASE_URL } from "../constants";
 

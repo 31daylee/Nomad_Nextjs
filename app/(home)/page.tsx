@@ -9,20 +9,20 @@ export const metadata = {
   title: "Home",
 };
 const api_key = process.env.API_KEY;
-async function PopularMovies() {
+async function getPopularMovies() {
   const res = await fetch(`${API_URL}popular?api_key=${api_key}`).then((res) =>
     res.json()
   );
   return res.results;
 }
-async function TopMovies() {
+async function getTopMovies() {
   const res = await fetch(`${API_URL}top_rated?api_key=${api_key}`).then(
     (res) => res.json()
   );
   return res.results;
 }
 
-async function UpcomingMovies() {
+async function getUpcomingMovies() {
   const res = await fetch(`${API_URL}upcoming?api_key=${api_key}`).then((res) =>
     res.json()
   );
@@ -31,9 +31,9 @@ async function UpcomingMovies() {
 }
 
 export default async function HomePage() {
-  const popular = await PopularMovies();
-  const top = await TopMovies();
-  const upcoming = await UpcomingMovies();
+  const popular = await getPopularMovies();
+  const top = await getTopMovies();
+  const upcoming = await getUpcomingMovies();
   return (
     <>
       <Suspense fallback={<Loading />}>
