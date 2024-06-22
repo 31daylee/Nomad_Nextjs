@@ -1,55 +1,49 @@
 import { Suspense } from "react";
 import Footer from "../../components/footer/footer";
-import { API_KEY, API_URL } from "../constants";
+import { API_URL } from "../constants";
 import MovieContainer from "./movie-container";
 import TopContainer from "./top-rated-container";
 import UpcomingContainer from "./upcoming-container";
-import { ErrorBoundary } from "next/dist/client/components/error-boundary";
-import Error from "./error";
 import Loading from "./loading";
 export const metadata = {
   title: "Home",
 };
-async function fetchMovies(url) {
-  const res = await fetch(url);
-  if (!res.ok) {
-    //throw new Error("Network response was not ok");
-  }
-  const data = await res.json();
-  return data.results;
-}
+const api_key = process.env.API_KEY;
 async function PopularMovies() {
-  const movies = await fetchMovies(
-    `${process.env.API_URL}popular?api_key=${process.env.API_KEY}`
+  const res = await fetch(`${API_URL}popular?api_key=${api_key}`).then((res) =>
+    res.json()
   );
-  return <MovieContainer movies={movies} />;
+  return res.results;
 }
-
 async function TopMovies() {
-  const movies = await fetchMovies(
-    `${process.env.API_URL}top_rated?api_key=${process.env.API_KEY}`
+  const res = await fetch(`${API_URL}top_rated?api_key=${api_key}`).then(
+    (res) => res.json()
   );
-  return <TopContainer movies={movies} />;
+  return res.results;
 }
 
 async function UpcomingMovies() {
-  const movies = await fetchMovies(
-    `${process.env.API_URL}upcoming?api_key=${process.env.API_KEY}`
+  const res = await fetch(`${API_URL}upcoming?api_key=${api_key}`).then((res) =>
+    res.json()
   );
-  return <UpcomingContainer movies={movies} />;
+
+  return res.results;
 }
 
 export default async function HomePage() {
+  const popular = await PopularMovies();
+  const top = await TopMovies();
+  const upcoming = await UpcomingMovies();
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <PopularMovies />
+        <MovieContainer movies={popular} />
       </Suspense>
       <Suspense fallback={<Loading />}>
-        <TopMovies />
+        <TopContainer movies={top} />
       </Suspense>
       <Suspense fallback={<Loading />}>
-        <UpcomingMovies />
+        <UpcomingContainer movies={upcoming} />
       </Suspense>
       <Footer />
     </>
