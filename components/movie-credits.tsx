@@ -1,12 +1,6 @@
 import Image from "next/image";
 import { API_URL, IMAGE_BASE_URL } from "../app/constants";
 import defaultProfile from "../app/asserts/default-profile-image.webp";
-interface Credit {
-  id: number;
-  name: string;
-  character: string;
-  profile_path: string | null;
-}
 
 export async function getCredits(id: string) {
   const response = await fetch(
