@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { API_URL, IMAGE_BASE_URL } from "../app/constants";
+import { API_URL, IMAGE_URL } from "../app/constants";
 import defaultProfile from "../app/asserts/default-profile-image.webp";
 
 export async function getCredits(id: string) {
@@ -26,7 +26,7 @@ export default async function MoiveCredits({ id }: { id: string }) {
                 <div>
                   {credit.profile_path ? (
                     <Image
-                      src={`${IMAGE_BASE_URL}w500${credit.profile_path}`}
+                      src={`${IMAGE_URL.POSTER}${credit.profile_path}`}
                       width={100}
                       height={150}
                       alt={credit.name}

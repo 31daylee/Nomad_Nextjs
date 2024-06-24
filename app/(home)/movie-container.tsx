@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Mousewheel, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IMAGE_BASE_URL } from "../constants";
+import { IMAGE_URL } from "../constants";
 
 export default function MovieContainer({ movies }: { movies: any }) {
   return (
@@ -36,7 +36,7 @@ export default function MovieContainer({ movies }: { movies: any }) {
               <Movie
                 id={movie.id}
                 key={movie.id}
-                poster_path={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
+                poster_path={`${IMAGE_URL.POSTER}${movie.poster_path}`}
                 title=""
                 release_date=""
               />

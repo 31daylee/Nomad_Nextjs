@@ -1,3 +1,4 @@
+import Footer from "../../../../components/footer/footer";
 import MoiveCredits from "../../../../components/movie-credits";
 import MovieInfo, { getMovie } from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
@@ -25,6 +26,7 @@ export default async function MovieDetailPage({ params: { id } }: IParams) {
       <Suspense fallback={<h1>Loading movie videos</h1>}>
         <MovieVideos id={id} />
       </Suspense>
+      <Footer></Footer>
     </div>
   );
 }

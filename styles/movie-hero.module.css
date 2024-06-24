@@ -1,0 +1,41 @@
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+.heroImage {
+  filter: brightness(20%);
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.heroTitle {
+  margin-left: 18%;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.heroInfo {
+  margin-left: 18%;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+.heroOverview {
+  margin-left: 18%;
+  font-size: 17px;
+}
