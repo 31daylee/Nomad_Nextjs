@@ -13,14 +13,14 @@ export default function Footer() {
           <FontAwesomeIcon
             className={styles.logo}
             icon={faEnvelope}
-            style={{ color: "#ffffff" }}
+            style={{ color: "#000000" }}
           />
         </a>
         <a href="https://github.com/31daylee/Nomad_Nextjs">
           <FontAwesomeIcon
             className={styles.logo}
             icon={faGithub}
-            style={{ color: "#ffffff" }}
+            style={{ color: "#000000" }}
           />
         </a>
       </div>
