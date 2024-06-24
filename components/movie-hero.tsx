@@ -32,7 +32,9 @@ const HeroImage = ({ backdropPath, title, overview, releaseDate, runtime }) => {
             {getYearFromDate(releaseDate)} | {runtime} min
           </p>
         </div>
-        <p className={heroOverview}>{overview}</p>
+        <p className={heroOverview}>
+          {overview.length > 300 ? `${overview.slice(0, 300)}...` : overview}
+        </p>
       </div>
     </div>
   );

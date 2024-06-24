@@ -27,7 +27,6 @@ export default async function MovieInfo({ id }: { id: string }) {
         />
         <div className={styles.info}>
           <p className={styles.storyline}>Storyline</p>
-          {/* <Rating voteAverage={movie.vote_average} /> */}
           <p>{movie.overview}</p>
           <a
             className={styles.homepage}

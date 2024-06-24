@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { API_URL, IMAGE_URL } from "../app/constants";
-import defaultProfile from "../app/asserts/default-profile-image.webp";
+import { API_URL } from "../app/constants";
+import CreditContainer from "./movie-credits-container";
+import styels from "../styles/movie-credits.module.css";
 
 export async function getCredits(id: string) {
   const response = await fetch(
@@ -13,39 +13,13 @@ export async function getCredits(id: string) {
   return data.cast;
 }
 
-export default async function MoiveCredits({ id }: { id: string }) {
+export default async function MovieCredits({ id }: { id: string }) {
   const credits = await getCredits(id);
+
   return (
-    <div>
-      <div>
-        <ul>
-          {credits
-            .filter((credit) => credit.character)
-            .map((credit) => (
-              <li key={credit.id}>
-                <div>
-                  {credit.profile_path ? (
-                    <Image
-                      src={`${IMAGE_URL.POSTER}${credit.profile_path}`}
-                      width={100}
-                      height={150}
-                      alt={credit.name}
-                    />
-                  ) : (
-                    <Image
-                      src={defaultProfile}
-                      width={100}
-                      height={150}
-                      alt={credit.name}
-                    />
-                  )}
-                </div>
-                <div>{credit.name}</div>
-                <div>{credit.character}</div>
-              </li>
-            ))}
-        </ul>
-      </div>
+    <div className={styels.container}>
+      <h1 className={styels.title}>Cast</h1>
+      <CreditContainer credits={credits} />
     </div>
   );
 }

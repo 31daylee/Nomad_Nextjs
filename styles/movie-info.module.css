@@ -1,3 +1,7 @@
+.commonContainer {
+  width: 100%;
+  margin: 0 auto;
+}
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -32,8 +36,4 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-}
-.commonContainer {
-  width: 100%;
-  margin: 0 auto;
 }
