@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { IMAGE_URL } from "../app/constants";
 import defaultProfile from "../app/asserts/default-profile-image.webp";
-import styles from "../styles/movie-credits-swiper.module.css";
 
 export default function MovieCredits({ credits }: { credits: any }) {
   const swiperParams = {

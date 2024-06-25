@@ -9,13 +9,13 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/">HOME</Link>
         </li>
 
         <p className={styles.logo}>NEXTFILM</p>
 
         <li>
-          <Link href="/about-us">About</Link>
+          <Link href="/about-us">ABOUT</Link>
         </li>
       </ul>
     </nav>
