@@ -1,6 +1,5 @@
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=FF0000&text=NEXTFILM&height=140&fontSize=60)
 
-
 ## About the project
 
 Movie Application with NEXT.JS 14
@@ -16,8 +15,14 @@ Built with:
 - React.js
 - The Movie Database(TMDB)
 - Swiper
+  > npm install swiper
 - Font Awesome
-</hr>
+  > npm i --save @fortawesome/fontawesome-svg-core
+  > npm i --save @fortawesome/free-solid-svg-icons
+  > npm i --save @fortawesome/react-fontawesome@latest
+- Zustand
+  > npm install zustand
+  </hr>
 
 ## Course
 

@@ -1,24 +1,38 @@
 "use client";
+
 import Link from "next/link";
 import styles from "../styles/movie-info-nav.module.css";
-import { usePathname } from "next/navigation";
+import { useViewStore } from "../stores/viewStore";
 
 export default function Navigation({ id }: { id: string }) {
-  const path = usePathname();
+  const setView = useViewStore((state) => state.setView);
+
+  const handleClick = (view: string) => {
+    setView(view);
+  };
+
   return (
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="/movies/${id}">OVERVIEW</Link>
+          <Link href="#" onClick={() => handleClick("overview")}>
+            OVERVIEW
+          </Link>
         </li>
         <li>
-          <Link href="/">VIDEOS</Link>
+          <Link href="#" onClick={() => handleClick("videos")}>
+            VIDEOS
+          </Link>
         </li>
         <li>
-          <Link href="/about-us">COLLECTIONS</Link>
+          <Link href="#" onClick={() => handleClick("collections")}>
+            COLLECTIONS
+          </Link>
         </li>
         <li>
-          <Link href="/about-us">HOMEPAGE</Link>
+          <Link href="#" onClick={() => handleClick("homepage")}>
+            HOMEPAGE
+          </Link>
         </li>
       </ul>
     </nav>

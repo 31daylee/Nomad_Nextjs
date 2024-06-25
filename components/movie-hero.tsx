@@ -21,8 +21,8 @@ export async function getMovie(id: string) {
 
 export default async function HeroImage({ id }: { id: string }) {
   const movie = await getMovie(id);
-  const getYearFromDate = (releaseDate) => {
-    const date = new Date(releaseDate);
+  const getYearFromDate = (release_date) => {
+    const date = new Date(release_date);
     return date.getFullYear();
   };
   return (
@@ -39,7 +39,7 @@ export default async function HeroImage({ id }: { id: string }) {
           <h1 className={heroTitle}>{movie.title}</h1>
           <div className={heroInfo}>
             <p>
-              {getYearFromDate(movie.releaseDate)} | {movie.runtime} min
+              {getYearFromDate(movie.release_date)} | {movie.runtime} min
             </p>
           </div>
           <p className={heroOverview}>
