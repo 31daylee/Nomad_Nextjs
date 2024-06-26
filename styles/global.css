@@ -142,3 +142,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}

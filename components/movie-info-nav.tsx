@@ -25,13 +25,13 @@ export default function Navigation({ id }: { id: string }) {
           </Link>
         </li>
         <li>
-          <Link href="#" onClick={() => handleClick("collections")}>
-            COLLECTIONS
+          <Link href="#" onClick={() => handleClick("series")}>
+            SERIES
           </Link>
         </li>
         <li>
-          <Link href="#" onClick={() => handleClick("homepage")}>
-            HOMEPAGE
+          <Link href="#" onClick={() => handleClick("review")}>
+            REVIEW
           </Link>
         </li>
       </ul>

@@ -1,0 +1,29 @@
+.container {
+  padding: 0;
+  gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+  color: black;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline {
+  font-size: x-large;
+  margin-bottom: 10px;
+  color: white;
+}

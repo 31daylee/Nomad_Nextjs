@@ -5,6 +5,7 @@ import styles from "../styles/movie-info.module.css";
 import { useEffect, useState } from "react";
 import { getMovie } from "../app/(movies)/movies/[id]/action";
 import MovieCredits from "./movie-credits";
+import MovieSimilar from "./movie-similar";
 
 interface MovieGenre {
   name: string;
@@ -39,16 +40,13 @@ export default function MovieInfo({ id }: { id: string }) {
           <p className={styles.storyline}>Storyline</p>
           <p>{movie.overview}</p>
           <p>{movie.genres?.map((genre) => genre.name).join(" | ")}</p>
-          <a
-            className={styles.homepage}
-            href={movie.homepage}
-            target={"_blank"}
-          >
+          <a className={styles.button} href={movie.homepage} target={"_blank"}>
             WATCH TRAILER▶
           </a>
         </div>
       </div>
       <MovieCredits id={id} />
+      <MovieSimilar id={id} />
     </div>
   );
 }

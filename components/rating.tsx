@@ -1,23 +1,25 @@
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import React from "react";
+import ReactStars from "react-stars";
 
-interface CircularProgressProps {
-  value: number;
+interface RatingProps {
+  value?: number | null;
 }
 
-const CircularProgress: React.FC<CircularProgressProps> = ({ value }) => {
+export default function Rating({ value }: RatingProps) {
   return (
-    <CircularProgressbarWithChildren value={value}>
-      <img
-        style={{ width: 40, marginTop: -5 }}
-        src="https://i.imgur.com/b9NyUGm.png"
-        alt="doge"
-      />
-      <div style={{ fontSize: 12, marginTop: -5 }}>
-        <strong>{value}%</strong>
-      </div>
-    </CircularProgressbarWithChildren>
+    <div>
+      {value !== null && value !== undefined ? (
+        <ReactStars
+          count={5}
+          size={24}
+          color2={"#fcba03"}
+          value={value / 2}
+          half={true}
+          edit={false}
+        />
+      ) : (
+        <span></span>
+      )}
+    </div>
   );
-};
-
-export default CircularProgress;
+}

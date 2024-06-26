@@ -2,6 +2,7 @@
   width: 100%;
   margin: 0 auto;
 }
+
 .heroWrapper {
   position: relative;
   width: 100%;
@@ -34,12 +35,24 @@
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .heroInfo {
   margin-left: 18%;
   font-size: 19px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
+
 .heroOverview {
   margin-left: 18%;
   font-size: 17px;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+.info {
+  white-space: nowrap;
 }

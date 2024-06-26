@@ -4,6 +4,7 @@ import MovieInfoNav from "../../../../components/movie-info-nav";
 import ContentRenderer from "../../../../components/content-renderer";
 import { Suspense } from "react";
 import { getMovie } from "./action";
+import Loading from "./loading";
 
 interface IParams {
   params: { id: string };
@@ -19,11 +20,11 @@ export async function generateMetadata({ params: { id } }: IParams) {
 export default async function MovieDetailPage({ params: { id } }: IParams) {
   return (
     <div>
-      <Suspense fallback={<h1>Loading movie hero</h1>}>
+      <Suspense fallback={<Loading />}>
         <MovieHero id={id} />
       </Suspense>
       <MovieInfoNav id={id} />
-      <Suspense fallback={<h1>Loading movie</h1>}>
+      <Suspense fallback={<Loading />}>
         <ContentRenderer id={id} />
       </Suspense>
       <Footer />

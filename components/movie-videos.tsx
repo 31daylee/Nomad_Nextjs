@@ -17,15 +17,16 @@ export default function MovieVideos({ id }: { id: string }) {
       await getVideos(id).then((res) => setVideos(res));
     })();
   }, []);
+  const latestVideos = videos?.slice(0, 15);
   return (
     <div className={styles.container}>
-      {videos?.map((video) => (
+      {latestVideos?.map((latestVideos) => (
         <iframe
-          key={video.id}
-          src={`https://youtube.com/embed/${video.key}`}
+          key={latestVideos.id}
+          src={`https://youtube.com/embed/${latestVideos.key}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
           allowFullScreen
-          title={video.name}
+          title={latestVideos.name}
         />
       ))}
     </div>

@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+  line-height: 1.5;
+  font-size: 15px;
+  border: 3px solid red;
+  padding: 15px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: rgba(255, 255, 255, 0.705);
+}

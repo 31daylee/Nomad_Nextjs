@@ -55,8 +55,10 @@ export default function MovieCredits({ id }: { id: string }) {
                       alt={credit.name}
                     />
                   )}
-                  <div>{credit.name}</div>
-                  <div>{credit.character}</div>
+                  <div>
+                    <div className={styels.name}>{credit.name}</div>
+                    <div className={styels.character}>{credit.character}</div>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
