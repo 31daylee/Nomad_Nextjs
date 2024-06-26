@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/movie-hero.module.css";
 import { API_URL, IMAGE_URL } from "../app/constants";
+import MovieRating from "../components/rating";
 
 const {
   commonContainer,
@@ -39,6 +40,7 @@ export default async function HeroImage({ id }: { id: string }) {
           <h1 className={heroTitle}>{movie.title}</h1>
           <div className={heroInfo}>
             <p>
+              {/* <MovieRating value={movie.vote_average} /> */}
               {getYearFromDate(movie.release_date)} | {movie.runtime} min
             </p>
           </div>

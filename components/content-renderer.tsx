@@ -1,3 +1,4 @@
+"use client";
 import { useViewStore } from "../stores/viewStore";
 import MovieInfo from "./movie-info";
 import MovieVideos from "./movie-videos";

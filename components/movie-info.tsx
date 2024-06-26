@@ -1,18 +1,33 @@
-import { API_URL, IMAGE_URL } from "../app/constants";
+"use client";
+
+import { IMAGE_URL } from "../app/constants";
 import styles from "../styles/movie-info.module.css";
-import MoiveCredits from "./movie-credits";
-export async function getMovie(id: string) {
-  const response = await fetch(
-    `${API_URL}${id}?api_key=${process.env.API_KEY}`
-  );
-  return response.json();
+import { useEffect, useState } from "react";
+import { getMovie } from "../app/(movies)/movies/[id]/action";
+import MovieCredits from "./movie-credits";
+
+interface MovieGenre {
+  name: string;
 }
 
-export default async function MovieInfo({ id }: { id: string }) {
-  const movie = await getMovie(id);
-  const genreNames = movie.genres.map((genre) => genre.name).join(" | ");
+interface Movie {
+  poster_path?: string;
+  title?: string;
+  tagline?: string;
+  overview?: string;
+  homepage?: string;
+  genres?: MovieGenre[];
+}
+
+export default function MovieInfo({ id }: { id: string }) {
+  const [movie, setMovie] = useState<Movie>({});
+  useEffect(() => {
+    (async function (id: string) {
+      await getMovie(id).then((res) => setMovie(res));
+    })(id);
+  }, []);
   return (
-    <div className={styles.commonContainer}>
+    <div>
       <div className={styles.container}>
         <img
           src={`${IMAGE_URL.POSTER}${movie.poster_path}`}
@@ -23,7 +38,7 @@ export default async function MovieInfo({ id }: { id: string }) {
           <p className={styles.tagline}>"{movie.tagline}"</p>
           <p className={styles.storyline}>Storyline</p>
           <p>{movie.overview}</p>
-          <p>{genreNames}</p>
+          <p>{movie.genres?.map((genre) => genre.name).join(" | ")}</p>
           <a
             className={styles.homepage}
             href={movie.homepage}
@@ -33,7 +48,7 @@ export default async function MovieInfo({ id }: { id: string }) {
           </a>
         </div>
       </div>
-      <MoiveCredits id={id} />
+      <MovieCredits id={id} />
     </div>
   );
 }

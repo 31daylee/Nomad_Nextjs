@@ -3,7 +3,7 @@ import MovieHero from "../../../../components/movie-hero";
 import MovieInfoNav from "../../../../components/movie-info-nav";
 import ContentRenderer from "../../../../components/content-renderer";
 import { Suspense } from "react";
-import { getMovie } from "../../../../components/movie-info";
+import { getMovie } from "./action";
 
 interface IParams {
   params: { id: string };
@@ -23,7 +23,9 @@ export default async function MovieDetailPage({ params: { id } }: IParams) {
         <MovieHero id={id} />
       </Suspense>
       <MovieInfoNav id={id} />
-      <ContentRenderer id={id} />
+      <Suspense fallback={<h1>Loading movie</h1>}>
+        <ContentRenderer id={id} />
+      </Suspense>
       <Footer />
     </div>
   );

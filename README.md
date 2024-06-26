@@ -18,7 +18,9 @@ Built with:
   > npm install swiper
 - Font Awesome
   > npm i --save @fortawesome/fontawesome-svg-core
+  > <br/>
   > npm i --save @fortawesome/free-solid-svg-icons
+  > <br/>
   > npm i --save @fortawesome/react-fontawesome@latest
 - Zustand
   > npm install zustand

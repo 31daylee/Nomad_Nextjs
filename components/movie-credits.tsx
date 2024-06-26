@@ -1,25 +1,67 @@
-import { API_URL } from "../app/constants";
-import CreditContainer from "./movie-credits-container";
-import styels from "../styles/movie-credits.module.css";
+"use client";
 
-export async function getCredits(id: string) {
-  const response = await fetch(
-    `${API_URL}${id}/credits?api_key=${process.env.API_KEY}`
-  );
-  if (!response.ok) {
-    throw new Error(`Failed to fetch credits for movie with id ${id}`);
-  }
-  const data = await response.json();
-  return data.cast;
+import styels from "../styles/movie-credits.module.css";
+import { getCredits } from "../app/(movies)/movies/[id]/action";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { IMAGE_URL } from "../app/constants";
+import defaultProfile from "../app/asserts/default-profile-image.webp";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+export interface Credit {
+  id: string;
+  name: string;
+  profile_path: string;
+  character: string;
 }
 
-export default async function MovieCredits({ id }: { id: string }) {
-  const credits = await getCredits(id);
-
+export default function MovieCredits({ id }: { id: string }) {
+  const [credits, setCredits] = useState<Credit[]>([]);
+  useEffect(() => {
+    (async function () {
+      await getCredits(id).then((res) => {
+        setCredits(res);
+      });
+    })();
+  }, []);
+  const swiperParams = {
+    spaceBetween: 10,
+    slidesPerView: 10,
+    navigation: true,
+    pagination: { clickable: true },
+  };
   return (
     <div className={styels.container}>
       <h1 className={styels.title}>Cast</h1>
-      <CreditContainer credits={credits} />
+      <div>
+        <Swiper {...swiperParams}>
+          {credits
+            .filter((credit) => credit.character)
+            .map((credit) => (
+              <SwiperSlide key={credit.id}>
+                <div className="swiper-slide">
+                  {credit.profile_path ? (
+                    <Image
+                      src={`${IMAGE_URL.POSTER}${credit.profile_path}`}
+                      width={100}
+                      height={150}
+                      alt={credit.name}
+                    />
+                  ) : (
+                    <Image
+                      src={defaultProfile}
+                      width={100}
+                      height={150}
+                      alt={credit.name}
+                    />
+                  )}
+                  <div>{credit.name}</div>
+                  <div>{credit.character}</div>
+                </div>
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
