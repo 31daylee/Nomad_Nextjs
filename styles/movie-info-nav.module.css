@@ -21,16 +21,22 @@
   padding: 0 200px;
 }
 
-.nav ul li {
+.navItem {
   list-style: none;
   transform: none;
   transition: all 0.1s ease-in-out;
   margin: 0 15px;
 }
 
-.nav ul li:hover {
+.navItem:hover {
   transform: scale(1.05);
   color: red;
+}
+
+.navItem.active {
+  color: red;
+  transform: scale(1.05);
+  border-bottom: 1px solid red;
 }
 
 @media (max-width: 768px) {
