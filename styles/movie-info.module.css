@@ -30,6 +30,18 @@
 }
 .storyline {
   font-size: xx-large;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 13px;
+}
+
+.storyline:before {
+  content: "";
+  position: absolute;
+  width: 18%;
+  height: 1px;
+  bottom: 0;
+  border-bottom: 3px solid #ffc04b;
 }
 .button {
   background-color: #ffc04b;

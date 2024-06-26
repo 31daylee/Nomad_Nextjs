@@ -28,4 +28,16 @@
 }
 .cate {
   font-size: larger;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 13px;
+}
+
+.cate:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  bottom: 0;
+  border-bottom: 3px solid red;
 }

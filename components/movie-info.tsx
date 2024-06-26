@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { getMovie } from "../app/(movies)/movies/[id]/action";
 import MovieCredits from "./movie-credits";
 import MovieSimilar from "./movie-similar";
+import Button from "react-bootstrap/Button";
 
 interface MovieGenre {
   name: string;

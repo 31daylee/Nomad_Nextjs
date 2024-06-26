@@ -14,6 +14,8 @@ Built with:
 - Next.js
 - React.js
 - The Movie Database(TMDB)
+- React Bootstrap
+  > npm install react-bootstrap bootstrap
 - Swiper
   > npm install swiper
 - Font Awesome

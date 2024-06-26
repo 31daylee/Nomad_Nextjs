@@ -11,7 +11,19 @@
   margin: 0 auto;
   padding: 40px;
   font-size: 28px;
+  position: relative;
+  padding-bottom: 13px;
 }
+
+.headline:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 1px;
+  bottom: 0;
+  border-bottom: 3px solid #ffc04b;
+}
+
 .poster {
   border-radius: 20px;
   max-width: 70%;
