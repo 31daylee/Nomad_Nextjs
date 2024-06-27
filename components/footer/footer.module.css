@@ -10,17 +10,20 @@
   margin-top: 50px;
 }
 
-.copyright {
-  color: #d1d1d1;
-  font-weight: 100;
-}
-
-.info {
-  padding-right: 20px;
+.iconContainer {
   display: flex;
-  gap: 15px;
+  gap: 10px;
+  margin-left: 60%;
 }
 
 .logo {
-  font-size: 1rem;
+  color: #ffffff;
+  font-size: 1.7rem;
+  margin: 0 10px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
