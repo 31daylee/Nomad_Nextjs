@@ -26,16 +26,17 @@ export default function MovieContainer({ movies }: { movies: any }) {
         navigation
         pagination={{ clickable: true }}
       >
-        {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
-            <Movie
-              id={movie.id}
-              poster_path={`${IMAGE_URL.POSTER}${movie.poster_path}`}
-              title={movie.title}
-              release_date=""
-            />
-          </SwiperSlide>
-        ))}
+        {movies &&
+          movies.map((movie) => (
+            <SwiperSlide key={movie.id}>
+              <Movie
+                id={movie.id}
+                poster_path={`${IMAGE_URL.POSTER}${movie.poster_path}`}
+                title={movie.title}
+                release_date=""
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

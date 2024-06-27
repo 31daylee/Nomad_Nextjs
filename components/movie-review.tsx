@@ -32,6 +32,7 @@ export default function MovieReview({ id }: { id: string }) {
     <div>
       <div className={styles.container}>
         {reviews.length > 0 ? (
+          reviews &&
           reviews.map((review, index) => (
             <ul key={index} className={styles.info}>
               <li>

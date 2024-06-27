@@ -20,15 +20,16 @@ export default function MovieVideos({ id }: { id: string }) {
   const latestVideos = videos?.slice(0, 15);
   return (
     <div className={styles.container}>
-      {latestVideos?.map((latestVideos) => (
-        <iframe
-          key={latestVideos.id}
-          src={`https://youtube.com/embed/${latestVideos.key}`}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
-          allowFullScreen
-          title={latestVideos.name}
-        />
-      ))}
+      {latestVideos &&
+        latestVideos?.map((latestVideos) => (
+          <iframe
+            key={latestVideos.id}
+            src={`https://youtube.com/embed/${latestVideos.key}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+            allowFullScreen
+            title={latestVideos.name}
+          />
+        ))}
     </div>
   );
 }

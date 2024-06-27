@@ -39,16 +39,17 @@ export default function MovieSimilar({ id }: { id: string }) {
         modules={[Grid, Pagination]}
         className={styles.swiper}
       >
-        {similarMovies?.map((similarMovies) => (
-          <SwiperSlide key={similarMovies.id} className={styles.slide}>
-            <MoviePoster
-              id={similarMovies.id}
-              poster_path={`${IMAGE_URL.POSTER}${similarMovies.poster_path}`}
-              title={similarMovies.title}
-              release_date={similarMovies.release_date}
-            />
-          </SwiperSlide>
-        ))}
+        {similarMovies &&
+          similarMovies?.map((similarMovies) => (
+            <SwiperSlide key={similarMovies.id} className={styles.slide}>
+              <MoviePoster
+                id={similarMovies.id}
+                poster_path={`${IMAGE_URL.POSTER}${similarMovies.poster_path}`}
+                title={similarMovies.title}
+                release_date={similarMovies.release_date}
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

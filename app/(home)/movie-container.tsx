@@ -31,17 +31,18 @@ export default function MovieContainer({ movies }: { movies: any }) {
         className="mySwiper"
       >
         <div className="container">
-          {movies.map((movie, idx) => (
-            <SwiperSlide key={`${idx}-first-movie`}>
-              <Movie
-                id={movie.id}
-                key={movie.id}
-                poster_path={`${IMAGE_URL.POSTER}${movie.poster_path}`}
-                title=""
-                release_date=""
-              />
-            </SwiperSlide>
-          ))}
+          {movies &&
+            movies.map((movie, idx) => (
+              <SwiperSlide key={`${idx}-first-movie`}>
+                <Movie
+                  id={movie.id}
+                  key={movie.id}
+                  poster_path={`${IMAGE_URL.POSTER}${movie.poster_path}`}
+                  title=""
+                  release_date=""
+                />
+              </SwiperSlide>
+            ))}
         </div>
       </Swiper>
     </div>
