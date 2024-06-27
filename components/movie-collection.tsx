@@ -1,12 +1,14 @@
 "use client";
 
 import { IMAGE_URL } from "../app/constants";
-import styles from "../styles/movie-series.module.css";
+import styles from "../styles/movie-collection.module.css";
 import { useEffect, useState } from "react";
 import {
   getCollectionId,
   getCollection,
 } from "../app/(movies)/movies/[id]/action";
+import Rating from "./rating";
+import MoviePoster from "./movie-poster";
 
 interface Collection {
   id: number;
@@ -15,7 +17,7 @@ interface Collection {
   backdrop_path: string;
 }
 interface Parts {
-  id: number;
+  id: string;
   title: string;
   poster_path: string;
   overview: string;
@@ -42,15 +44,15 @@ export default function MovieCollection({ id }: { id: string }) {
     <div>
       {collection && (
         <>
-          <h1 className={styles.headline}>Collection: {collection.name}</h1>
-          <div className={styles.container}>
+          <h1 className={styles.headline}>Collection</h1>
+          <div className={styles.backdrop}>
             <img
-              src={`${IMAGE_URL.SMALL}${collection.poster_path}`}
+              src={`${IMAGE_URL.BACKDROP}${collection.backdrop_path}`}
               className={styles.poster}
               alt={collection.name}
             />
-            <div className={styles.info}>
-              <p className={styles.title}>{collection.name}</p>
+            <div className={styles.backinfo}>
+              <p className={styles.backtitle}>{collection.name}</p>
             </div>
           </div>
         </>
@@ -58,18 +60,27 @@ export default function MovieCollection({ id }: { id: string }) {
       {parts &&
         parts.map((part) => (
           <div key={part.id} className={styles.container}>
-            <img
-              src={`${IMAGE_URL.SMALL}${part.poster_path}`}
-              className={styles.poster}
-              alt={part.title}
-            />
+            <div className={styles.poster}>
+              <MoviePoster
+                id={part.id}
+                poster_path={`${IMAGE_URL.POSTER}${part.poster_path}`}
+                title={part.title}
+                release_date={part.release_date}
+              />
+            </div>
             <div className={styles.info}>
               <p className={styles.title}>{part.title}</p>
+              <div className={styles.smallInfo}>
+                <Rating value={part.vote_average} />{" "}
+                <span className={styles.average_number}>
+                  {part.vote_average}
+                </span>
+                <span className={styles.separator}>|</span>
+                <span className={styles.release_date}>
+                  {part.release_date}
+                </span>{" "}
+              </div>
               <p className={styles.overview}>{part.overview}</p>
-              <p className={styles.release_date}>
-                Release Date: {part.release_date}
-              </p>
-              <p className={styles.vote_average}>Rating: {part.vote_average}</p>
             </div>
           </div>
         ))}

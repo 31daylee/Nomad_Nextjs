@@ -6,6 +6,7 @@
   margin: 0 auto;
   margin-top: 20px;
 }
+
 .headline {
   width: 73%;
   margin: 0 auto;
@@ -13,6 +14,29 @@
   font-size: 28px;
   position: relative;
   padding-bottom: 13px;
+}
+
+.backdrop {
+  display: grid;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.backinfo {
+  display: grid;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.backtitle {
+  font-size: xx-large;
+  color: #ffc04b;
+  font-weight: bolder;
 }
 
 .headline:before {
@@ -43,13 +67,16 @@
   line-height: 1.5;
   font-size: 15px;
 }
-
-.watch {
-  background-color: #8d8d8d;
-  color: rgb(255, 255, 255);
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 35px;
+.smallInfo {
+  font-size: 19px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.separator {
+  margin: 6px;
+}
+.average_number {
+  margin-left: 6px;
+  font-size: 15px;
 }
