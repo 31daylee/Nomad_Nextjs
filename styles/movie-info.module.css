@@ -50,4 +50,10 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  transition: all 0.1s ease-in-out;
+  margin: 0 15px;
+}
+
+.button:hover {
+  transform: scale(1.06);
 }
