@@ -5,7 +5,7 @@ import { useState } from "react";
 import styles from "../styles/movie-info-nav.module.css";
 import { useViewStore } from "../stores/viewStore";
 
-export default function Navigation() {
+export default function Navigation({ id }: { id: string }) {
   const setView = useViewStore((state) => state.setView);
   const [activeView, setActiveView] = useState<string>("overview");
 
