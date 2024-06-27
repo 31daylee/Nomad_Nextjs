@@ -37,11 +37,11 @@ export default function Navigation() {
         </li>
         <li
           className={`${styles.navItem} ${
-            activeView === "series" ? styles.active : ""
+            activeView === "collection" ? styles.active : ""
           }`}
         >
-          <Link href="#" onClick={() => handleClick("series")}>
-            SERIES
+          <Link href="#" onClick={() => handleClick("collection")}>
+            COLLECTION
           </Link>
         </li>
         <li

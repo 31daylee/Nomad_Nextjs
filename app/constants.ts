@@ -1,5 +1,5 @@
 export const API_URL = "https://api.themoviedb.org/3/movie/";
-
+export const COLLECTION_URL = "https://api.themoviedb.org/3/collection/";
 export const IMAGE_URL = {
   BASE: "http://image.tmdb.org/t/p/",
   POSTER: "https://image.tmdb.org/t/p/w500/",
