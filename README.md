@@ -5,14 +5,13 @@
 Movie Application with NEXT.JS 14
 </br>
 (This project refers to the Nomad Coder lecture)
+
 ## 🖼 [Demo](https://nextjs-movies-nine-lovat.vercel.app/)
 
 ![image](https://github.com/31daylee/Nomad_Nextjs/assets/136422529/fd271b72-d99e-4f2e-a11e-b20506beb43d)
 ![image](https://github.com/31daylee/Nomad_Nextjs/assets/136422529/3ff361d9-42d2-4806-83b5-09c00383b1b3)
 ![image](https://github.com/31daylee/Nomad_Nextjs/assets/136422529/f68db803-9e2a-4a04-b314-ce71d6e50e76)
 ![image](https://github.com/31daylee/Nomad_Nextjs/assets/136422529/f22929fa-db32-44b6-aad5-de64eb535ab9)
-
-
 
 ## ⚙️ Tech Stack
 
@@ -35,6 +34,10 @@ Built with:
 - Zustand
   > npm install zustand
   </hr>
+- Tailwindcss
+  > npm install -D tailwindcss
+- Skeleton
+  > npm i -D @skeletonlabs/skeleton@next @skeletonlabs/skeleton-react@next
 
 ## 📚 Course
 
